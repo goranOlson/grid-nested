@@ -1,0 +1,65 @@
+html {
+
+}
+body {
+    margin: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, [col] 150px);
+    grid-template-rows: repeat(2, [row] auto);
+    gap: 10px;
+        /* background-color: #aaa; */
+}
+
+.box {
+    padding: 20px;
+    background-color: aquamarine;
+    border-radius: 7px;
+    font-size: 150%;
+}
+
+.box .box {  /* sub box*/
+    display: grid;
+    color: #444;
+
+    background-color: crimson;
+}
+
+.a {
+    grid-column: col / span 2;
+    grid-row: row;
+}
+ .b {
+    grid-column: col 3 / span 2;
+    grid-row: row;
+}
+ .c {
+    grid-column: col / span 2;
+    grid-row: row 2;
+}
+.d {
+    grid-column: col 3 / span 2;
+    grid-row: row 2;
+    
+    /* The nested grid-rules */
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Sub grid-rules */
+.e {
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+.f {
+    grid-column: 2; /* moved */
+    grid-row: 2;
+}
+.g {
+    grid-column: 1; /* moved */
+    grid-row: 2;
+}
